@@ -1,4 +1,8 @@
-# React and Stateless Function Components
++++
+categories = ["JavaScript"]
+date = "2015-11-15T11:56:11+01:00"
+title = "React and Stateless Function Components"
++++
 
 In React, components can be defined in various ways:
 
@@ -10,9 +14,9 @@ The [stateless function component](https://facebook.github.io/react/docs/reusabl
 can be used to produce very easily create stateless components which
 only implement a (pure) `render()` function:
 
-```js
+```javascript
 const Hello = props => <div>Hello {props.name}</div>;
-ReactDOM.render (<Hello name="world" />, mountNode);
+ReactDOM.render (<Hello name='world' />, mountNode);
 ```
 
 Since such components are **intrinsically pure** I was expecting that
@@ -23,7 +27,7 @@ For now, this **is not the case**. Every rendering goes through the (implicit)
 render method call defined by the stateless function component. To test
 this, I've written this small piece of code:
 
-```js
+```javascript
 const Hello = function (props) {
   Hello.renderCount++;
   return <div>Hello {props.name}</div>;
@@ -33,9 +37,9 @@ describe ('React', () => {
   describe ('Stateless function component', () => {
     it ('calls render() even if props do not change', () => {
       Hello.renderCount = 0;
-      ReactDOM.render (<Hello name='world'/>, mountNode);
+      ReactDOM.render (<Hello name='world' />, mountNode);
       expect (Hello.renderCount).to.equal (1);
-      ReactDOM.render (<Hello name='world'/>, mountNode);
+      ReactDOM.render (<Hello name='world' />, mountNode);
       expect (StatelessHello.renderCount).to.equal (2);
     });
   });

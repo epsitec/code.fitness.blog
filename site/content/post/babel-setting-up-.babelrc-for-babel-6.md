@@ -1,4 +1,8 @@
-# Set up `.babelrc` for Babel 6
++++
+categories = ["JavaScript"]
+date = "2015-11-14T11:47:11+01:00"
+title = "Set up .babelrc for Babel 6"
++++
 
 Since Babel 6, running `babel` won't automatically transform ES2016 to
 ES5. It won't recognize React JSX syntax (e.g. `return <div/>;`) either.

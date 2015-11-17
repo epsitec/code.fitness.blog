@@ -1,4 +1,8 @@
-# JSHint is complaining about my ES7 code
++++
+categories = ["JavaScript"]
+date = "2015-11-14T11:55:11+01:00"
+title = "JSHint is complaining about my ES7 code"
++++
 
 ES2015 source code is identified correctly by current versions of JSHint
 (as of this writing, Atom `jshint` package has version 1.8.3). However,

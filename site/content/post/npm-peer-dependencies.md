@@ -1,4 +1,8 @@
-# NPM and peer dependencies
++++
+categories = ["JavaScript"]
+date = "2015-11-17T10:24:00+01:00"
+title = "NPM and peer dependencies"
++++
 
 While working on the [`mai-chai` module](https://github.com/epsitec-sa/mai-chai)
 I realized that I should be using

@@ -1,0 +1,15 @@
+baseURL = "http://code.fitness/"
+languageCode = "en"
+title = "code.fitness"
+theme = "angels-ladder"
+
+[permalinks]
+  post = "/:year/:month/:filename/"
+
+[params]
+  subtitle = "Good code requires care."
+  facebook = "https://facebook.com/pierre.arnaud.969"
+  twitter = "https://twitter.com/epsitec"
+  github = "https://github.com/epsitec"
+  profile = "/images/profile.png"
+  copyright = "Copyright (C) 2015, Pierre Arnaud; all rights reserved."

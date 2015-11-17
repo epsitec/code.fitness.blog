@@ -1,4 +1,8 @@
-# WTF? My decorators don't do anything
++++
+categories = ["JavaScript"]
+date = "2015-11-15T11:47:11+01:00"
+title = "WTF? My decorators don't do anything"
++++
 
 With Babel 5.x it was possible to use the
 [`@decorator`](https://github.com/wycats/javascript-decorators)

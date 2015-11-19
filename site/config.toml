@@ -2,9 +2,7 @@ baseURL = "http://code.fitness/"
 languageCode = "en"
 title = "code.fitness"
 theme = "angels-ladder"
-
-[permalinks]
-  post = "/:year/:month/:filename/"
+uglyurls = true
 
 [params]
   subtitle = "Good code requires care."

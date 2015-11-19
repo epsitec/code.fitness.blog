@@ -1,4 +1,12 @@
 # Resources
+## JavaScript
+### Tips
+
+Why you should not slice `arguments`:
+
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
+* https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#32-leaking-arguments
+
 ## React
 ### Testing
 

@@ -44,3 +44,27 @@ There are a few differences, though:
 * The rest parameters does not have additional properties, whereas the
   `arguments` object contains properties `callee` and `length`, and in
   some cases also `caller` (which has been deprecated).
+
+## What is Babel doing?
+
+The current version of Babel (6.2.1) transpiles this ES2015 code:
+
+```javascript
+function join (...args) {
+  console.log (args);
+}
+```
+
+to this plain ES5 source:
+
+```javascript
+function join() {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+  console.log (args);
+}
+```
+
+There is no surprise in this code. It is about the same as I [would have done
+manually](javascript-function-arguments-do-not-slice.html).

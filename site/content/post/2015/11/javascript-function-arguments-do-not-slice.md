@@ -52,3 +52,6 @@ for (var i = 0; i < args.length; ++i) {
 and obviously, you should not extract this piece of code when doing
 some refactoring, as you'd end up with _leaking_ again, defeating the
 purpose of this code snippet.
+
+> EDIT: see [this follow-up post](javascript-will-not-listen-to-your-arguments.html)
+> for the idiomatic ES2015 way of writing equivalent code.

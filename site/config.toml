@@ -11,3 +11,4 @@ uglyurls = true
   github = "https://github.com/epsitec"
   profile = "/images/profile.png"
   copyright = "Copyright (C) 2015, Pierre Arnaud; all rights reserved."
+  analytics = "UA-446301-3"

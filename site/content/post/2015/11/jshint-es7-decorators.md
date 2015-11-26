@@ -9,7 +9,7 @@ ES2015 source code is identified correctly by current versions of JSHint
 trying to use experimental (`stage-0`) language features like _decorators_
 produces error messages:
 
-```js
+```javascript
 @bar
 class Foo {
 }

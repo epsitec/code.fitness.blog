@@ -31,10 +31,14 @@ which addresses exactly that issue. Details can be found on the
 
 To use `require-self`, here is all I did:
 
-1. Add a reference to it under the `devDependencies`.
-2. In the `compile` step, add a call to `require-self`.
+1. In the `compile` step, add a call to `require-self`.
+2. Add a reference to it under the `devDependencies`.
 3. Execute (at least once) `npm run compile` so that the magic
    of `require-self` can be put in place.
+
+The last step is not needed if `compile` gets called by `npm prepublish`,
+because the simple fact of executing an `npm install require-self --save-dev`
+will trigger a `prepublish` and thus execute `require-self`. 
    
 # Example
 
@@ -50,6 +54,7 @@ Here is an example taken from `electrum-arc`'s `package.json`:
   ...
   "electrum-require-components": "^0.2.1",
   "require-self": "^0.1.0",
+  "rimraf": "^2.4.4",
   ...
 }
 ```

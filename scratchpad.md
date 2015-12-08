@@ -12,10 +12,6 @@ How to identify a class as a class:
 * http://stackoverflow.com/questions/29093396/how-do-you-check-the-difference-between-an-ecmascript-6-class-and-function
 * See electrum, src/utils/checks.js
 
-Decorators are back in Babel:
-
-* https://www.npmjs.com/package/babel-plugin-transform-decorators-legacy
-
 ## React
 ### Testing
 
@@ -32,4 +28,7 @@ Decorators are back in Babel:
 * Use `npm-check` rather than `npm outdated`.
 
 
-AFX_IDS_UNTITLED 
+# Design
+##Material Design for Bootstrap
+
+* http://mdbootstrap.com/

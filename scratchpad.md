@@ -32,3 +32,64 @@ How to identify a class as a class:
 ##Material Design for Bootstrap
 
 * http://mdbootstrap.com/
+
+https://github.com/babel/babel/blob/master/packages/babel-plugin-transform-es2015-modules-commonjs/src/index.js
+line 32, buildExportAll
+
+let buildExportAll = template(`
+  for (let KEY in OBJECT) {
+    if (KEY === "default") continue;
+
+    Object.defineProperty(exports, KEY, {
+      enumerable: true,
+      get: function () {
+        return OBJECT[KEY];
+      }
+    });
+  }
+`);
+
+
+export * from './all-components.js';
+
+--->
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _allComponents = require('./all-components.js');
+
+var _loop = function _loop(_key2) {
+  if (_key2 === "default") return 'continue';
+  Object.defineProperty(exports, _key2, {
+    enumerable: true,
+    get: function get() {
+      return _allComponents[_key2];
+    }
+  });
+};
+
+for (var _key2 in _allComponents) {
+  var _ret = _loop(_key2);
+
+  if (_ret === 'continue') continue;
+}
+
+---- previously...
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _allComponents = require('./all-components.js');
+
+for (var _key in _allComponents) {
+  if (_key === "default") continue;
+  Object.defineProperty(exports, _key, {
+    enumerable: true,
+    get: function get() {
+      return _allComponents[_key];
+    }
+  });
+}

@@ -27,22 +27,6 @@ How to identify a class as a class:
 
 * Use `npm-check` rather than `npm outdated`.
 
-# Various
-## Computers
-### Upgrading an iMac
-
-* Disable System Integrated Protection (SIP) with `csrutil disable`
-  to modify the MBR and partition info with the Disk Utility, when
-  getting `could not change the partition type` while trying to
-  restore the bootcamp partition.
-  http://twocanoes.com/products/mac/winclone
-  http://apple.stackexchange.com/questions/208478/how-do-i-disable-system-integrity-protection-sip-aka-rootless-on-os-x-10-11
-  
-* Replace HDD with an SSD
-  https://www.ifixit.com/Guide/iMac+Intel+21.5-Inch+EMC+2308+Hard+Drive+Replacement/1766
-  http://exirion.net/ssdfanctrl/
-  http://www.applecomponents.com/computers/imac-27-inch-mid-2010/
-  
 # Design
 ##Material Design for Bootstrap
 

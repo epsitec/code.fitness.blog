@@ -222,3 +222,7 @@ updates will be fetched from the same origin as the other assets.
 
 Knowing that, I updated my Nancy web server to simply ship the hot
 updates from the default `http://host:port/hot/...` URI.
+
+> **[EDIT]** The issues have been addressed by Tobias Koppers. It is
+> now possible to use `__webpack_public_path__` with HMR too. Thanks
+> a lot for the quick fixes.

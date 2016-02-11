@@ -1,5 +1,5 @@
 +++
-categories = [""]
+categories = ["JavaScript"]
 date = "2016-02-11T09:57:40+01:00"
 title = "Require self and Wallaby.js"
 +++

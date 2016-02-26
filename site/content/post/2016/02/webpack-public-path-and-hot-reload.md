@@ -1,5 +1,5 @@
 +++
-categories = [""]
+categories = ["JavaScript"]
 date = "2016-02-03T18:12:59+01:00"
 title = "Webpack, Hot Module Replacement and the public path"
 +++

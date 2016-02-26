@@ -12,11 +12,21 @@ But if you are like me, you also want to continue to run your
 server. In this case, some additional work is required to get
 `require-self` to work smoothly with `mocha` too.
 
+My `test` script is defined like this and is started with `npm test`:
+
+```json
+  "script": {
+    ...
+    "test": "mocha src/test/**/*.js"
+  }
+```
+
 I have a `test/mocha.opts` file which contains the basic
 settings for running `mocha` with Babel. Add a `--require`
 option to inject `test-require-patch.js`:
 
 ```
+--compilers js:babel-core/register
 --require ./test/test-require-patch.js
 ```
 
@@ -45,3 +55,27 @@ if (!modulePrototype._originalRequire) {
 
 It will redirect any reference to the module using `require('foo')`
 to `src/index.js`.
+
+# EDIT &rArr;
+
+I shared an interesting
+[discussion](https://github.com/yortus/require-self/issues/5)
+with [yortus](https://github.com/yortus), `require-self`'s author,
+in order to see if there is a better solution than patching `require()`.
+It appears that the easiest solution is to run the tests from
+the _transpiled output_ rather than from the _sources_. It makes
+sense, since we want to test what `npm` will publish. And, moreover,
+it's easy to configure:
+
+```json
+  "script": {
+    "compile": "babel -d lib/ src/",
+    "prepublish": "require-self && npm run compile",
+    "test": "npm run compile && mocha --harmony lib/test/**/*.js"
+  }
+```
+
+Notice how we go through the compile step first, then start `mocha`
+on the transpiled output. The `--harmony` flag is needed when this
+is run on Node v4.x which does not by default understand ES2015
+features. With this setup, no _patching_ of `require` is required.

@@ -1,3 +1,3 @@
 pushd site
-C:\tools\hugo.exe new post/2016/03/_.md
+C:\tools\hugo.exe new post/2016/04/_.md
 popd

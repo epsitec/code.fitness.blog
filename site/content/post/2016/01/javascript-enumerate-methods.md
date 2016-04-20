@@ -1,5 +1,5 @@
 +++
-categories = [""]
+categories = ["javascript"]
 date = "2016-01-26T18:07:06+01:00"
 title = "Enumerating methods on a JavaScript class instance"
 +++

@@ -43,12 +43,16 @@ const hasScrollLock = ev.getModifierState ('ScrollLock');
 // ...
 ```
 
-Alas, trying this out in Electrum shell does never return
-`true` for `hasScrollLock`.
+> Alas, trying this out in Electrum shell does never return
+> `true` for `hasScrollLock`.
+> 
+> The feature seems to [have been implemented recently on
+> chromium](https://bugs.chromium.org/p/chromium/issues/detail?id=265458)
+> (marked as fixed on February 23 2016), so there is hope that
+> it will also find its way into my Electron instance in the
+> near future.
 
-The feature seems to [have been implemented recently on
-chromium](https://bugs.chromium.org/p/chromium/issues/detail?id=265458)
-(marked as fixed on February 23 2016), so there is hope that
-it will also find its way into my Electron instance in the
-near future.
-
+**EDIT** in Electron 1.0.2 `getModifierState()` works just fine.
+Thank you Mathieu Schroeter for updating our code base! However,
+the Chromium engine does not distinguish between Ctrl+Alt and
+AltGr.

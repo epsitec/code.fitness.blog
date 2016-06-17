@@ -1,5 +1,5 @@
 +++
-categories = [""]
+categories = ["html", "css", "layout"]
 date = "2016-06-17T06:23:13+02:00"
 title = "HTML Layout without CSS calc()"
 +++
@@ -30,7 +30,7 @@ Here is the solution I've come up with:
   </head>
   <body style="margin: 0;
                font-family: 'Open Sans', Arial, sans-serif;
-              font-size: 14px; line-height: 1.5;" >
+               font-size: 14px; line-height: 1.5;" >
     <div id="root"
          style="display: flex; flex-direction: row;
                 height: 100vh; background-color: cyan">

@@ -13,7 +13,7 @@ as content in my C# project, I just edited the `*.csproj` file manually
 and added this:
 
 ```xml
-    <Content Include="Content\electron\chrome-extensions\**">
+    <Content Include="Content\electron\chrome-extensions\**\*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
 ```
@@ -21,3 +21,13 @@ and added this:
 And from now one, whatever I drop on `Content/electron/chrome-extensions`
 will be picked up by Visual Studio. And this also works for nested
 subfolders.
+
+
+
+> **Update (June 23, 2016)**
+> 
+> I was not aware of the difference between `foo\**` and `foo\**\*`.
+> 
+> Both can be used in Visual Studio, with the same _visual appearance_ in
+> the Solution Explorer. However, only the latter (`**\*`) will really copy
+> the content files when building.

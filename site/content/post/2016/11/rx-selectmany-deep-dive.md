@@ -1,5 +1,5 @@
 +++
-categories = [".net", "rx"]
+categories = ["dotnet", "rx"]
 date = "2016-11-28T09:25:36+01:00"
 title = "Deep dive into rx SelectMany"
 +++
@@ -10,7 +10,7 @@ The result of the asynchronous operation must be observable too (`obs2`).
 
 `SelectMany()` provides exactly what is needed to do the job:
 
-```c#
+```csharp
 var obs1 = ...
 var obs2 = obs1.SelectMany (x => SomeAsyncMethod (x));
 ```
@@ -22,23 +22,23 @@ with `SomeAsyncMethod()` returning a `Task<T>`.
 Paul Betts [published this advice](http://log.paulbetts.org/rx-and-await-some-notes/)
 back in January 2014, which I've been applying ever since:
 
-> ## Async SelectMany
-> 
-> SelectMany has a super useful overload where you can write an awaitable method as a selector:
-> ```c#
-> var listOfUrls = new[] {  
->     "http://foo",
->     "http://foo",
->     "http://foo",
-> };
-> 
-> listOfUrls.ToObservable()  
->     .SelectMany(async x => {
->         var wc = new WebClient();
->         return await wc.DownloadStringTaskAsync(x);
->     })
->     .Subscribe(Console.WriteLine);
-> ```
+## Paul Betts' async SelectMany example
+
+SelectMany has a super useful overload where you can write an awaitable method as a selector:
+```csharp
+var listOfUrls = new[] {  
+    "http://foo",
+    "http://foo",
+    "http://foo",
+};
+
+listOfUrls.ToObservable()  
+    .SelectMany(async x => {
+        var wc = new WebClient();
+        return await wc.DownloadStringTaskAsync(x);
+    })
+    .Subscribe(Console.WriteLine);
+```
 
 But what's going on behind the scenes?
 
@@ -72,7 +72,7 @@ on, I used a custom event producer (the `Pump` class) to push two values
 and then complete the observable sequence. I added references to the rx
 assemblies built from the source.
 
-```c#
+```csharp
 var pump = new Pump ();
 var obs1 = pump as System.IObservable<int>;
 var obs2 = obs1.SelectMany (x => Program.AsyncWork (x));
@@ -91,7 +91,7 @@ using (var subs = obs2.Subscribe (
 
 And here is the asynchronous method:
 
-```c#
+```csharp
 static async Task<int> AsyncWork(int value)
 {
     System.Console.WriteLine ($"AsyncWork({value}): begin");
@@ -119,7 +119,7 @@ Stepping into `SelectMany` leads us quickly into the internals of the
 `System.Reactive.Linq`, into class `QueryLanguage` which simply returns
 an observable:
 
-```c#
+```csharp
 return new SelectMany<TSource, TResult>(source, (x, token) => selector(x));
 ```
 
@@ -129,7 +129,7 @@ asynchronous method. Nothing else of interest is going on here.
 Next, let's step into `Subscribe()`. We finally reach the implementation
 of the `SelectMany<TSource, TResult>` class:
 
-```c#
+```csharp
 var sink = new SelectManyImpl(this, observer, cancel);
 setSink(sink);
 return sink.Run();
@@ -192,5 +192,5 @@ the production of new events in the output stream.
   implementation will be called without any overlapping), but not
   necessarily in the same order as the input events.
 
-To mitigate the ordering issue, `SelectMany()` has an overload which
-takes a selector with signature `Func<TSource, int, Task<TResult>>`.
+> Note: To mitigate the ordering issue, `SelectMany()` comes with an
+> overload which takes a selector with signature `Func<TSource, int, Task<TResult>>`.

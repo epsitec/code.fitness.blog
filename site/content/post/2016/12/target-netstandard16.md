@@ -1,5 +1,5 @@
 +++
-categories = ["VS"]
+categories = ["vs"]
 date = "2016-12-09T05:00:57+01:00"
 title = "How to target .NET Standard 1.6 with Visual Studio 2015"
 +++

@@ -1,5 +1,5 @@
 +++
-categories = ["JavaScript"]
+categories = ["js"]
 date = "2015-11-17T10:24:00+01:00"
 title = "NPM and peer dependencies"
 +++

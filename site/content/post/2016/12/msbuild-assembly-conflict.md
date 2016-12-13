@@ -1,5 +1,5 @@
 +++
-categories = ["Build"]
+categories = ["build"]
 date = "2016-12-06T06:30:32+01:00"
 title = "Resolving MSB3247 - msbuild found conflicts between versions"
 +++

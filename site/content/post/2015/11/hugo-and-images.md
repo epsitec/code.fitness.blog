@@ -1,5 +1,5 @@
 +++
-categories = ["Tools"]
+categories = ["tools"]
 date = "2015-11-19T11:23:49+01:00"
 title = "Hugo and image inclusion does not work out of the box"
 +++

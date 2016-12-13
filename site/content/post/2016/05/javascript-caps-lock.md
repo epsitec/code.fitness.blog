@@ -1,5 +1,5 @@
 +++
-categories = [""]
+categories = ["js"]
 date = "2016-05-12T11:05:12+02:00"
 title = "Is Caps Lock on?"
 +++

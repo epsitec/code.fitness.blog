@@ -1,5 +1,5 @@
 +++
-categories = ["JavaScript"]
+categories = ["js"]
 date = "2016-02-11T10:44:13+01:00"
 title = "Mocha tests and require self"
 +++

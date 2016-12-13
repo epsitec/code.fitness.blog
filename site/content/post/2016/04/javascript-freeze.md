@@ -1,5 +1,5 @@
 +++
-categories = ["javascript"]
+categories = ["js"]
 date = "2016-04-20T07:02:22+02:00"
 title = "Store immutability and the freezer"
 +++

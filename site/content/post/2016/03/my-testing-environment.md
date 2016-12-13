@@ -1,5 +1,5 @@
 +++
-categories = ["JavaScript"]
+categories = ["js"]
 date = "2016-03-15T09:34:31+01:00"
 title = "My JavaScript testing environment"
 +++

@@ -1,5 +1,5 @@
 +++
-categories = ["JavaScript"]
+categories = ["js"]
 date = "2015-11-25T13:52:53+01:00"
 title = "Dynamic import with ES2015"
 +++

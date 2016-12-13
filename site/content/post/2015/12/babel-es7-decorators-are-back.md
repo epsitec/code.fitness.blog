@@ -1,5 +1,5 @@
 +++
-categories = ["JavaScript"]
+categories = ["js"]
 date = "2015-12-08T15:59:00+01:00"
 title = "ES7 decorators are back in Babel 6.x"
 +++

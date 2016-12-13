@@ -1,5 +1,5 @@
 +++
-categories = [""]
+categories = ["electrum"]
 date = "2015-12-16T10:18:00+01:00"
 title = "Electrum, themes and components"
 +++

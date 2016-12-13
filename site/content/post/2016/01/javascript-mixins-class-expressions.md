@@ -1,5 +1,5 @@
 +++
-categories = [""]
+categories = ["js"]
 date = "2016-01-12T20:43:59+01:00"
 title = "Mixins through class expressions"
 +++

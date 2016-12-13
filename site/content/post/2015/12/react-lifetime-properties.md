@@ -1,5 +1,5 @@
 +++
-categories = [""]
+categories = ["react"]
 date = "2015-12-10T09:37:14+01:00"
 title = "The lifetime of React properties"
 +++

@@ -1,5 +1,5 @@
 +++
-categories = ["Build"]
+categories = ["build"]
 date = "2015-11-30T17:33:16+01:00"
 title = "Require self as an npm module"
 +++

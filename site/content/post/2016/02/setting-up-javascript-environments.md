@@ -1,5 +1,5 @@
 +++
-categories = [""]
+categories = ["js", "tools"]
 date = "2016-02-25T17:47:20+01:00"
 title = "Tired of setting up JavaScript environments?"
 +++

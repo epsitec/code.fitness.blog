@@ -1,5 +1,5 @@
 +++
-categories = [""]
+categories = ["hardware"]
 date = "2016-01-11T20:45:02+01:00"
 title = "Replacing an iMac hard disk with an SSD"
 +++

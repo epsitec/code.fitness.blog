@@ -1,5 +1,5 @@
 +++
-categories = ["Debugging", "Win32"]
+categories = ["debugging", "win32"]
 date = "2015-12-04T16:52:58+01:00"
 title = "MFC Win32 app silently dies"
 +++

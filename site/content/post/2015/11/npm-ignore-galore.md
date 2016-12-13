@@ -1,5 +1,5 @@
 +++
-categories = ["Build"]
+categories = ["build"]
 date = "2015-11-25T09:24:03+01:00"
 title = "The .npmignore galore"
 +++

@@ -1,5 +1,5 @@
 +++
-categories = ["JavaScript"]
+categories = ["js"]
 date = "2015-11-26T15:35:26+01:00"
 title = "Building a JavaScript command line tool"
 +++

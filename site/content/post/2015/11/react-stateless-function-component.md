@@ -1,5 +1,5 @@
 +++
-categories = ["JavaScript"]
+categories = ["js"]
 date = "2015-11-15T11:56:11+01:00"
 title = "React and Stateless Function Components"
 +++

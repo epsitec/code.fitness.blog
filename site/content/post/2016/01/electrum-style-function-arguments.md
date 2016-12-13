@@ -1,5 +1,5 @@
 +++
-categories = [""]
+categories = ["electrum"]
 date = "2016-01-05T11:09:53+01:00"
 title = "What should a Style Function operate on?"
 +++

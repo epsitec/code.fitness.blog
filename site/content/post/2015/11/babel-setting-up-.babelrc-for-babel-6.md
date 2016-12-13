@@ -1,5 +1,5 @@
 +++
-categories = ["JavaScript"]
+categories = ["js"]
 date = "2015-11-14T11:47:11+01:00"
 title = "Set up .babelrc for Babel 6"
 +++

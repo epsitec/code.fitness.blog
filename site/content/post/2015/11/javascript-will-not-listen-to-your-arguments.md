@@ -1,5 +1,5 @@
 +++
-categories = ["JavaScript"]
+categories = ["js"]
 date = "2015-11-23T05:30:22+01:00"
 title = "I will not listen to your arguments"
 +++

@@ -1,5 +1,5 @@
 +++
-categories = ["Tools"]
+categories = ["tools"]
 date = "2015-11-17T17:19:00+01:00"
 title = "Getting started with Hugo"
 +++
@@ -85,7 +85,7 @@ looks like this:
 
 ```
 +++
-categories = ["Tools"]
+categories = ["tools"]
 date = "2015-11-17T17:19:00+01:00"
 title = "Getting started with Hugo"
 +++

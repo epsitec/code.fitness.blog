@@ -1,5 +1,5 @@
 +++
-categories = ["HTML", "javascript"]
+categories = ["html", "js"]
 date = "2016-04-21T09:29:12+02:00"
 title = "A bad idea: GUIDs as DOM elements IDs"
 +++

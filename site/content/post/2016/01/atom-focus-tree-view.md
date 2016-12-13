@@ -1,5 +1,5 @@
 +++
-categories = [""]
+categories = ["vs", "atom"]
 date = "2016-01-27T10:11:29+01:00"
 title = "Focus the tree view in atom editor"
 +++

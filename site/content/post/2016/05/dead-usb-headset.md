@@ -1,5 +1,5 @@
 +++
-categories = ["windows"]
+categories = ["hardware"]
 date = "2016-05-13T16:37:24+02:00"
 title = "Logitech USB Headset not working?"
 +++

@@ -1,5 +1,5 @@
 +++
-categories = ["JavaScript"]
+categories = ["js"]
 date = "2015-12-08T15:48:25+01:00"
 title = "ES6 export with wildcard, Babel 6.x bug"
 +++

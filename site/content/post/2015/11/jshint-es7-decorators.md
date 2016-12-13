@@ -1,5 +1,5 @@
 +++
-categories = ["JavaScript"]
+categories = ["js"]
 date = "2015-11-14T11:55:11+01:00"
 title = "JSHint is complaining about my ES7 code"
 +++

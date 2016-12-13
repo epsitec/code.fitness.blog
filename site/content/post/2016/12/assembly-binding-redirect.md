@@ -1,5 +1,5 @@
 +++
-categories = ["Debugging"]
+categories = ["debugging"]
 date = "2016-12-06T16:12:13+01:00"
 title = "Resolving assembly version mismatches"
 +++

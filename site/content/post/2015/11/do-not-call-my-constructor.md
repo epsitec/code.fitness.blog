@@ -1,5 +1,5 @@
 +++
-categories = ["JavaScript"]
+categories = ["js"]
 date = "2015-11-20T05:43:46+01:00"
 title = "Don't call my constructor!"
 +++

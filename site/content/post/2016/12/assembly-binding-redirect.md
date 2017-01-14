@@ -1,6 +1,6 @@
 +++
 categories = ["debugging"]
-date = "2016-12-06T16:12:13+01:00"
+date = "2016-12-06T16:12:14+01:00"
 title = "Resolving assembly version mismatches"
 +++
 
@@ -57,7 +57,7 @@ file:
 ```xml
 <dependentAssembly>
   <assemblyIdentity name="System.Reactive.Interfaces" publicKeyToken="94bc3704cddfc263" culture="neutral" />
-  <bindingRedirect oldVersion="0.0.0.0-3.0.1000.0" newVersion="3.0.1000.0" />
+  <bindingRedirect oldVersion="0.0.0.0-3.0.3000.0" newVersion="3.0.1000.0" />
 </dependentAssembly>
 ```
 
@@ -75,3 +75,4 @@ core assembly, `System.Reactive.Core`.
 
 I don't know the reason for this. But with the current version of Visual Studio
 2015 Update 3, the error is systematic.
+

@@ -6,11 +6,12 @@ title = "Using CSharpScript with .NET Standard"
 
 I expected `CSharpScript` found in `Microsoft.CodeAnalysis.CSharp.Scripting`
 to work with .NET Standard out of the box. But this was not the case. Trying
-to compile the simplest of code snippets (e.g. returning `42m`) failed:
+to compile the simplest of code snippets (e.g. returning `x+42m`, where `x`
+is defined in some global type structure) failed:
 
 ```csharp
 var options = ScriptOptions.Default;
-var script  = CSharpScript.Create<int> ("42m", options: options, globalsType: typeof (Globals));
+var script  = CSharpScript.Create<decimal> ("x+42m", options: options, globalsType: typeof (Globals));
 var func    = script.CreateDelegate ();
 ```
 
@@ -62,8 +63,17 @@ public static class TypeExtensions
 
 _Note: we need to specify the absolute path to the assemblies found on disk for this to work._
 
+Edit 1: the `ServiceLocator.AssemblyLoader.GetAssemblyLoadPath()` function is basically
+just returning `assembly.Location` and belongs to code implemented in an IoC container
+implemented by our framework.
+
+Edit 2: the root of the problem is with `Globals` being defined in a third assembly,
+implemented as a .NET Framwork portable class library as my
+[GitHub Code Sample](https://github.com/epsitec/rnd-csharpscript-netstandard) demonstrates.
+
 ## Related articles
 
 * GitHub: Roslyn issue 12393, [Predefined type 'System.Object' is not defined or imported](https://github.com/dotnet/roslyn/issues/12393).
 * StackOverflow: ['Object' is defined in an assembly that is not referenced](http://stackoverflow.com/questions/38943899/net-core-cs0012-object-is-defined-in-an-assembly-that-is-not-referenced).
 * StackOverflow: [C# scripting API does not load assembly](http://stackoverflow.com/questions/41340226/c-sharp-scripting-api-does-not-load-assembly/41356621#41356621).
+* GitHub: Sample code [which shows issue](https://github.com/epsitec/rnd-csharpscript-netstandard).

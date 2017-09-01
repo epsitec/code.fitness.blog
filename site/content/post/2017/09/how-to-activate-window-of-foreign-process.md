@@ -22,8 +22,11 @@ The main app has a button which brings up a window of
 the companion app, and should change the focus so that
 the user can directly type into the companion app.
 
-For this to work, I've come up with the following
-solution:
+The solution found on StackOverflow [Is there a reliable way to activate / set focus to a window using C#?](https://stackoverflow.com/questions/2671669/is-there-a-reliable-way-to-activate-set-focus-to-a-window-using-c) did not work out for me.
+
+## A clean solution - if you can modify both apps
+
+I've come up with the following solution:
 
 * The main app starts the companion app and retrieves
   the window handle of the companion window.

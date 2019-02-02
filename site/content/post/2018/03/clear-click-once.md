@@ -8,7 +8,7 @@ I've been struggling with recent versions of Visual Studio 2017
 and ClickOnce for several months, without being able to resolve
 all my issues (impossible code signing with an external tool,
 broken automatic update, broken file associations after manual
-update, etc.) so I decided to give up ClickOnce completely.
+update, [.NET 4.7.1 and Nuget difficulties](https://developercommunity.visualstudio.com/content/problem/152706/clickonce-installation-fails-with-net-471.html) to name a few), so I finally decided to give up ClickOnce completely and get back to a plain old (and trusted) installer.
 
 ## Getting rid of failed ClickOnce installs
 

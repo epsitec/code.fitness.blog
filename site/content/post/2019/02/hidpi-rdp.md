@@ -14,7 +14,8 @@ _DPI unaware_:
 cd C:\Windows\System32
 copy mstsc.exe mstsc2.exe
 copy en-us\mstsc.exe.mui en-us\mstsc2.exe.mui
-reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" /t REG_SZ /v "C:\Windows\System32\mstsc2.exe" /d "~ DPIUNAWARE" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" \
+  /t REG_SZ /v "C:\Windows\System32\mstsc2.exe" /d "~ DPIUNAWARE" /f
 ```
 
 ## Interesting side-effects

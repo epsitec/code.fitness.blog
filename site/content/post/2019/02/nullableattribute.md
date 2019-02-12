@@ -124,3 +124,6 @@ set like this:
 
 </Project>
 ```
+
+> **Edit 12.02.2019** Jon Skeet [published this detailed article](https://codeblog.jonskeet.uk/2019/02/10/nullableattribute-and-c-8/) on
+> how the `NullableAttribute` works with more complex types.

@@ -1,4 +1,4 @@
 pushd site
-start C:\tools\hugo.exe server -w
-start http://localhost:1313
+start C:\tools\hugo.exe server -w --disableFastRender --port 1414
+start http://localhost:1414
 popd

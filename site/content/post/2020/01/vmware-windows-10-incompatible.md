@@ -63,7 +63,7 @@ After some digging around, I decided to **disable secure boot** in the BIOS sett
 of my PC, then re-ran the scripts above and rebooted.
 
 I've been able to successfully start my VM and I am back to normal. However, as I
-expected, WSL2 is no longer working, as it requires Hyper-V.
+expected, WSL2 is no longer working, as it [requires Hyper-V](https://docs.microsoft.com/en-us/windows/wsl/wsl2-faq).
 
 > Please enable the Virtual Machine Platform Windows feature and ensure virtualization
 > is enabled in the BIOS.  

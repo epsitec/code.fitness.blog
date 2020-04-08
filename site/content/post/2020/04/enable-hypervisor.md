@@ -9,7 +9,8 @@ Now that [VMware 20H1 Tech Preview](https://blogs.vmware.com/workstation/2020/01
 with Hyper-V support is available, I decided to upgrade my
 [Worstation](https://pcsupport.lenovo.com/us/en/products/workstations/thinkstation-p-series-workstations/thinkstation-p910/30b9/30b9cto1ww/s4dj4570/downloads/DS112675)
 in order to use [**WSL 2**](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install)
-and **Docker** on top of Hyper-V.
+and [**Docker**](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled)
+on top of Hyper-V.
 
 I have however been struggling for hours to get Hyper-V to run. I consistently
 got an error message, asking me to enable _Hardware assisted virtualization_
@@ -23,7 +24,8 @@ and _Hardware assisted data-execution protection_ in the BIOS.
 3. I made sure that every option pertaining to Hyper-V was enabled by running
    `systeminfo` from the command prompt.
 
-I vaguely remembered disabling something related to Hyper-V a few months ago,
+I vaguely remembered [disabling something related to Hyper-V](https://code.fitness/post/2020/01/vmware-windows-10-incompatible.html)
+a few months ago (yes, I even [blogged](https://code.fitness/post/2020/01/vmware-windows-10-incompatible.html) about it),
 and I finally realized that I had disabled the the hypervisor at boot time,
 using `bcdedit`.
 
@@ -32,3 +34,10 @@ Here is how to turn the hypervisor back on:
 ```cmd
 bcdedit /set hypervisorlaunchtype auto
 ```
+
+Now I have:
+
+- Hyper-V running.
+- VMware running on top of Hyper-V.
+- WSL 2 running on top of Hyper-V.
+- Docker running on top of Hyper-V.

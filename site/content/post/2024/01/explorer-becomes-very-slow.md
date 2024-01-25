@@ -38,6 +38,18 @@ HKEY_LOCAL_MACHINE
               GDIProcessHandleQuota
 ```
 
+and
+
+```
+HKEY_LOCAL_MACHINE
+  \SOFTWARE
+    \Microsoft
+      \Windows NT
+        \CurrentVersion
+          \Windows
+            GDIProcessHandleQuota
+```
+
 The documentation on [GDI Objects](https://learn.microsoft.com/en-us/windows/win32/sysinfo/gdi-objects)
 says that the `GDIProcessHandleQuota` limits the number of GDI
 handles to objects.
@@ -55,7 +67,11 @@ my systems seems to stay responsive.
 
 > An article found on [M-Files support](https://m-files.my.site.com/s/article/GDI-object-handle-limit-might-fill-up-causing-explorer-exe-to-misfunction-or-crash)
 tends to confirm that exceeding 10,000 GDI objects can cause Windows
-to misbehave.
+to misbehave.  
+> And on [superuser.com](https://superuser.com/questions/1273959/windows-10-windows-open-slow-gui-draw-slows-down-with-heavy-multitasking-bu)
+Christopher's answers points to the same direction... he observes that
+Windows _starts to throttle, a sort of "rate limit" of graphic
+objects, hence giving slowness and graphic glitches_.
 
 So I now have to test this for a few days, in order to decide if
 this is some IT placebo effect, or if the there is a difference.

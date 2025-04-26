@@ -6,9 +6,7 @@ uglyurls = true
 
 [params]
   subtitle = "Good code requires care."
-  facebook = "https://facebook.com/pierre.arnaud.969"
-  twitter = "https://twitter.com/epsitec"
   github = "https://github.com/epsitec"
   profile = "/images/profile.png"
-  copyright = "Copyright © 2015-2024, Pierre Arnaud; all rights reserved."
+  copyright = "Copyright © 2015-2025, Pierre Arnaud; all rights reserved."
   analytics = "UA-446301-3"

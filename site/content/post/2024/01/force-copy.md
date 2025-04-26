@@ -30,7 +30,7 @@ I downloaded the [Force-Copy.ps1](https://github.com/DavorJ/PS-ForceCopy/blob/ma
 file and copied it to my `C:\Tools` folder. As explained by Davor,
 trying to execute it directly would fail with following message:
 
-```
+```txt
 C:\Tools\Force-Copy.ps1 : File C:\Tools\Force-Copy.ps1 cannot be loaded.
 The file C:\Tools\Force-Copy.ps1 is not digitally signed. You cannot
 run this script on the current system. For more information about running
@@ -41,7 +41,7 @@ https:/go.microsoft.com/fwlink/?LinkID=135170.
 However, rather than changing the _execution policy_ globally, I
 prefer to unblock just that file:
 
-```cmd
+```ps1
 Unblock-File -Path C:\Tools\Force-Copy.ps1
 ```
 
@@ -50,7 +50,7 @@ Unblock-File -Path C:\Tools\Force-Copy.ps1
 Now that I unblocked the file without changing the _execution policy_ of my system,
 I can run the script to copy the damaged file:
 
-```cmd
+```ps1
 C:\Tools\Force-Copy.ps1 \
   -SourceFilePath "Build (S)-000003.vmdk" \
   -DestinationFilePath "D:\VMs\Build (S)-000003.vmdk"
@@ -62,6 +62,6 @@ speed up the whole operation by a factor of 5, however the copy
 did not work as advertised and produced a hole of 32MB in the file, rather than discarding _just 4096 bytes_.
 
 > The `-BufferSize 33554432` argument tells the script to attempt to read
-chunks of 32MB each, and `-BufferGranularSize 4096` ensures that the
-reads will be done with the minimal cluster size once when an error
-is encountered. This makes the whole process much faster.
+> chunks of 32MB each, and `-BufferGranularSize 4096` ensures that the
+> reads will be done with the minimal cluster size once when an error
+> is encountered. This makes the whole process much faster.

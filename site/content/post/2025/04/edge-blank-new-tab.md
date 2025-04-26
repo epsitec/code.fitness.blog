@@ -20,7 +20,7 @@ stubbornly remains.
 Fortunately, you can configure a registry key under software policies to
 navigate to `about:blank` instead when creating a new tab:
 
-```bat
+```txt
 Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\Software\Policies\Microsoft\Edge\Recommended]

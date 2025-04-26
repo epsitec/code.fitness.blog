@@ -4,9 +4,46 @@ title = "code.fitness"
 theme = "angels-ladder"
 uglyurls = true
 
+# Pagination configuration for Hugo 0.147.0+
+[pagination]
+  pagerSize = 20    # Number of posts per page
+  path = "page"      # URL path for pagination
 [params]
   subtitle = "Good code requires care."
   github = "https://github.com/epsitec"
   profile = "/images/profile.png"
   copyright = "Copyright © 2015-2025, Pierre Arnaud; all rights reserved."
   analytics = "UA-446301-3"
+  # Disqus configuration (moved inside params section for Hugo 0.147.0+)
+  disqusShortname = "" # Leave empty to disable Disqus comments
+
+# DEPRECATED: The following Pygments settings are replaced by markup.highlight above
+# Keeping them for compatibility with older Hugo versions
+pygmentsCodeFences = true
+pygmentsStyle = "friendly"
+pygmentsUseClasses = true
+
+# Markup configuration for Hugo 0.147.0+
+[markup]
+  # Goldmark markdown renderer configuration
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true # Allows raw HTML in markdown files
+  
+  # Syntax highlighting configuration
+  [markup.highlight]
+    # Use the friendly style for all code blocks
+    style = "friendly"
+    # Ensure line numbers are not shown (remove if you want line numbers)
+    lineNos = true
+    # Use classes instead of inline styles for flexibility
+    noClasses = false
+    # Ensure code blocks without language specification still get highlighted
+    codeFences = true
+    guessSyntax = false
+    # Add a light border around code blocks for better visibility
+    lineNumbersInTable = false
+    tabWidth = 4
+
+# Optionally suppress certain warning logs
+# ignoreLogs = ['warning-goldmark-raw-html']

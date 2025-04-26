@@ -1,3 +1,87 @@
+/* Custom code block styling for Hugo with Friendly theme */
+
+/* Base styles for code elements */
+pre, code {
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 3px;
+}
+
+/* Inline code */
+code {
+  background-color: #f0f0f0;
+  padding: 2px 4px;
+  color: #333;
+}
+
+/* Code blocks */
+pre {
+  background-color: #f0f0f0;
+  padding: 1em;
+  overflow: auto;
+  margin-bottom: 1.5em;
+  border: 1px solid #e0e0e0;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  display: block;
+}
+
+/* Override highlights.js dark theme */
+.hljs {
+  background: #f0f0f0 !important;
+  color: #333 !important;
+}
+
+/* Hugo chroma (Pygments) styles */
+.chroma {
+  background-color: #f0f0f0;
+  padding: 1em;
+  overflow: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+}
+
+/* Visual Studio default light theme colors for code highlighting */
+/* Background */ .bg { background-color:#f0f0f0; }
+/* PreWrapper */ .chroma { background-color:#f0f0f0; }
+/* Keyword */ .chroma .k { color:#0000ff; font-weight:bold }
+/* KeywordConstant */ .chroma .kc { color:#0000ff; font-weight:bold }
+/* KeywordDeclaration */ .chroma .kd { color:#0000ff; font-weight:bold }
+/* KeywordNamespace */ .chroma .kn { color:#0000ff; font-weight:bold }
+/* KeywordPseudo */ .chroma .kp { color:#0000ff }
+/* KeywordReserved */ .chroma .kr { color:#0000ff; font-weight:bold }
+/* KeywordType */ .chroma .kt { color:#2b91af }
+/* NameAttribute */ .chroma .na { color:#000000 }
+/* NameBuiltin */ .chroma .nb { color:#000000 }
+/* NameClass */ .chroma .nc { color:#2b91af; font-weight:bold }
+/* NameConstant */ .chroma .no { color:#000000 }
+/* NameDecorator */ .chroma .nd { color:#646464; font-weight:bold }
+/* NameEntity */ .chroma .ni { color:#000000; font-weight:bold }
+/* NameException */ .chroma .ne { color:#2b91af }
+/* NameFunction */ .chroma .nf { color:#000000 }
+/* NameLabel */ .chroma .nl { color:#000000; font-weight:bold }
+/* NameNamespace */ .chroma .nn { color:#2b91af; font-weight:bold }
+/* NameTag */ .chroma .nt { color:#0000ff; font-weight:bold }
+/* NameVariable */ .chroma .nv { color:#000000 }
+/* LiteralString */ .chroma .s { color:#a31515 }
+/* LiteralStringDoc */ .chroma .sd { color:#a31515; font-style:italic }
+/* LiteralStringDouble */ .chroma .s2 { color:#a31515 }
+/* LiteralStringEscape */ .chroma .se { color:#a31515; font-weight:bold }
+/* LiteralStringOther */ .chroma .sx { color:#a31515 }
+/* LiteralStringRegex */ .chroma .sr { color:#a31515 }
+/* LiteralStringSingle */ .chroma .s1 { color:#a31515 }
+/* LiteralNumber */ .chroma .m { color:#000000 }
+/* Operator */ .chroma .o { color:#000000 }
+/* OperatorWord */ .chroma .ow { color:#0000ff; font-weight:bold }
+/* Comment */ .chroma .c { color:#008000; font-style:italic }
+/* CommentMultiline */ .chroma .cm { color:#008000; font-style:italic }
+/* CommentSingle */ .chroma .c1 { color:#008000; font-style:italic }
+/* CommentSpecial */ .chroma .cs { color:#008000; font-style:italic }
+/* CommentPreproc */ .chroma .cp { color:#0000ff }
+
 /* Image Center Alignment */
 article img {
   display: block;

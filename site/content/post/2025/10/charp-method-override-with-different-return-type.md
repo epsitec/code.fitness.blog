@@ -71,6 +71,8 @@ public class Generic<T> : AbstractBase
 }
 ```
 
+&rArr; [Open in .NET Fiddle](https://dotnetfiddle.net/L57HM9)
+
 When you run this, the output is:
 
 ```text
